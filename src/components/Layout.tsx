@@ -1,9 +1,13 @@
-export default function Layout({ children }) {
+interface ChildrenProps {
+  children: ReactNode;
+}
+
+export default function Layout({ children }: ChildrenProps) {
   return (
     <>
-    <div>aaa</div>
-    <div>{children}</div>
-    <div>ccc</div>
+      <div>Top</div>
+      <div>{children}</div>
+      <div>Bottom</div>
     </>
-  );	  
+  );
 }
