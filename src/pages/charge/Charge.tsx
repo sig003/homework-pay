@@ -1,5 +1,7 @@
 export default function Charge() {
   return (
-    <div>fefe</div>
+    <>
+      <div>fefe</div>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import Layout from '/src/components/Layout';
+import { Layout } from '/src/components/';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
