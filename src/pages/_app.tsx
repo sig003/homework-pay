@@ -9,19 +9,19 @@ const queryClient = new QueryClient();
 const GlobalStyles = createGlobalStyle`
   html,
   body {
-      padding: 0;
-      margin: 0;
-      font-family: 'Noto Sans KR', 'Arial', sans-serif;
-      line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', 'Arial', sans-serif;
+    line-height: 1.5;
   }
 
   a {
-      color: inherit;
-      text-decoration: none;
+    color: inherit;
+    text-decoration: none;
   }
 
   *, *::before, *::after {
-      box-sizing: border-box;
+    box-sizing: border-box;
   }
 `;
 
