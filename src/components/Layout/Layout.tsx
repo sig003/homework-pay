@@ -12,7 +12,7 @@ const LayoutWrapper = styled.div`
 
 const HeaderLayout = styled.div`
   background-color: hsl(191, 63%, 38%);
-  height: 50px;
+  height: 70px;
 `;
 
 const AsideSectionLayout = styled.div`
@@ -20,13 +20,14 @@ const AsideSectionLayout = styled.div`
 `;
 
 const AsideLayout = styled.div`
-  width: 15%;
-  height: calc(100vh - 50px);
+  max-width: 200px;
+  min-width: 200px;
+  height: calc(100vh - 70px);
 `;
 
 const SectionLayout = styled.div`
-  width: 85%;
-  height: calc(100vh - 50px);
+  width: 100%;
+  height: calc(100vh - 70px);
   background-color: hsl(0, 6%, 93%);
 `;
 

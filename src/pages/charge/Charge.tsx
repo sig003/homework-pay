@@ -4,7 +4,7 @@ const ContentsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem;
 `;
