@@ -14,8 +14,8 @@ custom hooks
 react-query   
 use css rem   
 use css hsla   
-css grid
-tdd   
+use css grid   
+tdd      
 styled component   
 component abstraction   
 heroku   
