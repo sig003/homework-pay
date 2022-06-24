@@ -13,6 +13,9 @@ const LayoutWrapper = styled.div`
 const HeaderLayout = styled.div`
   background-color: hsl(191, 63%, 38%);
   height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 `;
 
 const AsideSectionLayout = styled.div`
@@ -31,11 +34,19 @@ const SectionLayout = styled.div`
   background-color: hsl(0, 6%, 93%);
 `;
 
+const LogoStyle = styled.div`
+  font-weight: 600;
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%);
+`;
+
 export default function Layout({ children }: ChildrenProps) {
   return (
     <>
       <LayoutWrapper>
-        <HeaderLayout>Top</HeaderLayout>
+        <HeaderLayout>
+          <LogoStyle>HomeworkPay</LogoStyle>
+        </HeaderLayout>
         <AsideSectionLayout>
           <AsideLayout>aside</AsideLayout>
           <SectionLayout>{children}</SectionLayout>
