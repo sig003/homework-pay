@@ -19,6 +19,12 @@ const actions = [
 
 const ContentsWrapper = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const ContentsBoxWrapper = styled.div`
+  display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
@@ -30,77 +36,87 @@ const ContentBox = styled.div`
   width: 60rem;
   height: 10rem;
   border-radius: 10px;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
 `;
 
+const ContentsRightBox = styled.div`
+  width: 20rem;
+  height: 34rem;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+`;
+
 function Charge() {
   return (
     <>
       <ContentsWrapper>
-        <ContentBox>
-          <div>
-            <AccessTimeIcon color="primary" fontSize="medium" />
-          </div>
-          <div>Contents</div>
-          <SpeedDial
-            ariaLabel="Add Item"
-            FabProps={{ size: 'small' }}
-            icon={<SpeedDialIcon />}
-            direction="left"
-          >
-            {actions.map(action => (
-              <SpeedDialAction
-                key={action.name}
-                icon={action.icon}
-                tooltipTitle={action.name}
-              />
-            ))}
-          </SpeedDial>
-        </ContentBox>
-        <ContentBox>
-          <div>
-            <ElectricBoltIcon color="primary" fontSize="medium" />
-          </div>
-          <div>Contents</div>
-          <SpeedDial
-            ariaLabel="Add Item"
-            FabProps={{ size: 'small' }}
-            icon={<SpeedDialIcon />}
-            direction="left"
-          >
-            {actions.map(action => (
-              <SpeedDialAction
-                key={action.name}
-                icon={action.icon}
-                tooltipTitle={action.name}
-              />
-            ))}
-          </SpeedDial>
-        </ContentBox>
-        <ContentBox>
-          <div>
-            <FastfoodIcon color="primary" fontSize="medium" />
-          </div>
-          <div>Contents</div>
-          <SpeedDial
-            ariaLabel="Add Item"
-            FabProps={{ size: 'small' }}
-            icon={<SpeedDialIcon />}
-            direction="left"
-          >
-            {actions.map(action => (
-              <SpeedDialAction
-                key={action.name}
-                icon={action.icon}
-                tooltipTitle={action.name}
-              />
-            ))}
-          </SpeedDial>
-        </ContentBox>
+        <ContentsBoxWrapper>
+          <ContentBox>
+            <div>
+              <AccessTimeIcon color="primary" fontSize="medium" />
+            </div>
+            <div>Contents</div>
+            <SpeedDial
+              ariaLabel="Add Item"
+              FabProps={{ size: 'small' }}
+              icon={<SpeedDialIcon />}
+              direction="left"
+            >
+              {actions.map(action => (
+                <SpeedDialAction
+                  key={action.name}
+                  icon={action.icon}
+                  tooltipTitle={action.name}
+                />
+              ))}
+            </SpeedDial>
+          </ContentBox>
+          <ContentBox>
+            <div>
+              <ElectricBoltIcon color="primary" fontSize="medium" />
+            </div>
+            <div>Contents</div>
+            <SpeedDial
+              ariaLabel="Add Item"
+              FabProps={{ size: 'small' }}
+              icon={<SpeedDialIcon />}
+              direction="left"
+            >
+              {actions.map(action => (
+                <SpeedDialAction
+                  key={action.name}
+                  icon={action.icon}
+                  tooltipTitle={action.name}
+                />
+              ))}
+            </SpeedDial>
+          </ContentBox>
+          <ContentBox>
+            <div>
+              <FastfoodIcon color="primary" fontSize="medium" />
+            </div>
+            <div>Contents</div>
+            <SpeedDial
+              ariaLabel="Add Item"
+              FabProps={{ size: 'small' }}
+              icon={<SpeedDialIcon />}
+              direction="left"
+            >
+              {actions.map(action => (
+                <SpeedDialAction
+                  key={action.name}
+                  icon={action.icon}
+                  tooltipTitle={action.name}
+                />
+              ))}
+            </SpeedDial>
+          </ContentBox>
+        </ContentsBoxWrapper>
+        <ContentsRightBox>RECEIPIT</ContentsRightBox>
       </ContentsWrapper>
     </>
   );
