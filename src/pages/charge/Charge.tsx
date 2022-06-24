@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import SpeedDial from '@mui/material/SpeedDial';
@@ -9,6 +8,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
+import { ChargeContentDateTime } from '/src/components';
 
 const actions = [
   { icon: <FileCopyIcon />, name: 'Copy' },
@@ -56,24 +56,7 @@ function Charge() {
       <ContentsWrapper>
         <ContentsBoxWrapper>
           <ContentBox>
-            <div>
-              <AccessTimeIcon color="primary" fontSize="medium" />
-            </div>
-            <div>Contents</div>
-            <SpeedDial
-              ariaLabel="Add Item"
-              FabProps={{ size: 'small' }}
-              icon={<SpeedDialIcon />}
-              direction="left"
-            >
-              {actions.map(action => (
-                <SpeedDialAction
-                  key={action.name}
-                  icon={action.icon}
-                  tooltipTitle={action.name}
-                />
-              ))}
-            </SpeedDial>
+            <ChargeContentDateTime />
           </ContentBox>
           <ContentBox>
             <div>
