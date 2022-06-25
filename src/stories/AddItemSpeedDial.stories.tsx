@@ -9,6 +9,13 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
+  decorators: [
+    Story => (
+      <div>
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof AddItemSpeedDial>;
 
 const Template: ComponentStory<typeof AddItemSpeedDial> = args => (

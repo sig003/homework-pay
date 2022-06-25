@@ -15,19 +15,21 @@ const actions = [
 
 export default function AddItemSpeedDial() {
   return (
-    <SpeedDial
-      ariaLabel="Add Item"
-      FabProps={{ size: 'small' }}
-      icon={<SpeedDialIcon />}
-      direction="left"
-    >
-      {actions.map(action => (
-        <SpeedDialAction
-          key={action.name}
-          icon={action.icon}
-          tooltipTitle={action.name}
-        />
-      ))}
-    </SpeedDial>
+    <>
+      <SpeedDial
+        ariaLabel="Add Item"
+        FabProps={{ size: 'small' }}
+        icon={<SpeedDialIcon />}
+        direction="left"
+      >
+        {actions.map(action => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+          />
+        ))}
+      </SpeedDial>
+    </>
   );
 }
