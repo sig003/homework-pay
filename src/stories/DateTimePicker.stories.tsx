@@ -9,13 +9,6 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
-  decorators: [
-    DateTimePicker => (
-      <div style={{ padding: '3rem' }}>
-        <DateTimePicker />
-      </div>
-    ),
-  ],
 } as ComponentMeta<typeof DateTimePicker>;
 
 const Template: ComponentStory<typeof DateTimePicker> = args => (
