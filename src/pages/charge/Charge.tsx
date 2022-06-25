@@ -1,21 +1,7 @@
 import styled from 'styled-components';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
-import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
-import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
-import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
-import ShareIcon from '@mui/icons-material/Share';
-import { ChargeContentDateTime } from '/src/components';
-
-const actions = [
-  { icon: <FileCopyIcon />, name: 'Copy' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
-];
+import { ChargeContentDateTime, AddItemSpeedDial } from '/src/components';
 
 const ContentsWrapper = styled.div`
   display: flex;
@@ -63,40 +49,14 @@ function Charge() {
               <ElectricBoltIcon color="primary" fontSize="medium" />
             </div>
             <div>Contents</div>
-            <SpeedDial
-              ariaLabel="Add Item"
-              FabProps={{ size: 'small' }}
-              icon={<SpeedDialIcon />}
-              direction="left"
-            >
-              {actions.map(action => (
-                <SpeedDialAction
-                  key={action.name}
-                  icon={action.icon}
-                  tooltipTitle={action.name}
-                />
-              ))}
-            </SpeedDial>
+            <AddItemSpeedDial />
           </ContentBox>
           <ContentBox>
             <div>
               <FastfoodIcon color="primary" fontSize="medium" />
             </div>
             <div>Contents</div>
-            <SpeedDial
-              ariaLabel="Add Item"
-              FabProps={{ size: 'small' }}
-              icon={<SpeedDialIcon />}
-              direction="left"
-            >
-              {actions.map(action => (
-                <SpeedDialAction
-                  key={action.name}
-                  icon={action.icon}
-                  tooltipTitle={action.name}
-                />
-              ))}
-            </SpeedDial>
+            <AddItemSpeedDial />
           </ContentBox>
         </ContentsBoxWrapper>
         <ContentsRightBox>RECEIPIT</ContentsRightBox>
