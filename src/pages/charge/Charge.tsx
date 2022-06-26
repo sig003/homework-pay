@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { ChargeContentDateTime, AddItemSpeedDial } from '/src/components';
+import {
+  electricActions,
+  foodActions,
+} from '/src/components/ChargeContentActions/ContentActions';
 
 const ContentsWrapper = styled.div`
   display: flex;
@@ -49,14 +53,14 @@ function Charge() {
               <ElectricBoltIcon color="primary" fontSize="medium" />
             </div>
             <div>Contents</div>
-            <AddItemSpeedDial />
+            <AddItemSpeedDial actions={electricActions} />
           </ContentBox>
           <ContentBox>
             <div>
               <FastfoodIcon color="primary" fontSize="medium" />
             </div>
             <div>Contents</div>
-            <AddItemSpeedDial />
+            <AddItemSpeedDial actions={foodActions} />
           </ContentBox>
         </ContentsBoxWrapper>
         <ContentsRightBox>RECEIPIT</ContentsRightBox>
