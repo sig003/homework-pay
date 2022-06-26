@@ -23,14 +23,18 @@ const AsideSectionLayout = styled.div`
 `;
 
 const AsideLayout = styled.div`
+  width: 200px;
   max-width: 200px;
   min-width: 200px;
-  height: calc(100vh - 70px);
+  height: 100%;
 `;
 
 const SectionLayout = styled.div`
-  width: 100%;
-  height: calc(100vh - 70px);
+  width: calc(100% - 200px);
+  height: calc(100% - 70px);
+  position: fixed;
+  overflow: auto;
+  left: 200px;
   background-color: hsl(0, 6%, 93%);
 `;
 
