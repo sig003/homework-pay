@@ -1,8 +1,14 @@
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
+import DoNotDisturbAltIcon from '@mui/icons-material/DoNotDisturbAlt';
 
 export default function AddItemSpeedDial({ actions }) {
+  const defaultValue = {
+    name: 'no data',
+    icon: <DoNotDisturbAltIcon />,
+  };
+
   return (
     <>
       <SpeedDial
@@ -11,13 +17,21 @@ export default function AddItemSpeedDial({ actions }) {
         icon={<SpeedDialIcon />}
         direction="left"
       >
-        {actions.map(action => (
+        {actions ? (
+          actions.map(action => (
+            <SpeedDialAction
+              key={action.name}
+              icon={action.icon}
+              tooltipTitle={action.name}
+            />
+          ))
+        ) : (
           <SpeedDialAction
-            key={action.name}
-            icon={action.icon}
-            tooltipTitle={action.name}
+            key={defaultValue.name}
+            icon={defaultValue.icon}
+            tooltipTitle={defaultValue.name}
           />
-        ))}
+        )}
       </SpeedDial>
     </>
   );
