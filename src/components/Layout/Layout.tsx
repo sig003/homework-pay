@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import React from 'react';
 
 interface ChildrenProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const LayoutWrapper = styled.div`
