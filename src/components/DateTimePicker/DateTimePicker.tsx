@@ -4,7 +4,11 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
-export default function BasicDateTimePicker({ label }: string) {
+interface LabelProps {
+  label: string;
+}
+
+export default function BasicDateTimePicker({ label }: LabelProps) {
   const [value, setValue] = useState<Date | null>(new Date());
 
   return (
@@ -12,10 +16,10 @@ export default function BasicDateTimePicker({ label }: string) {
       <DateTimePicker
         inputFormat="yyyy-MM-dd hh:mm a"
         mask="___-__-__ __:__ _M"
-        renderInput={props => <TextField {...props} />}
+        renderInput={(props: string) => <TextField {...props} />}
         label={label}
         value={value}
-        onChange={newValue => {
+        onChange={(newValue: Date) => {
           setValue(newValue);
         }}
       />

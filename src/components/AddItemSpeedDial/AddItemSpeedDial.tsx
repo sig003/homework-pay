@@ -2,8 +2,18 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import DoNotDisturbAltIcon from '@mui/icons-material/DoNotDisturbAlt';
+import { SvgIconProps } from '@mui/core/SvgIcon';
 
-export default function AddItemSpeedDial({ actions }) {
+interface ActionProps {
+  name: string;
+  icon: React.ComponentType<SvgIconProps>;
+}
+
+interface ActionsProps {
+  actions: [ActionProps];
+}
+
+export default function AddItemSpeedDial({ actions }: ActionsProps) {
   const defaultValue = {
     name: 'no data',
     icon: <DoNotDisturbAltIcon />,
@@ -18,7 +28,7 @@ export default function AddItemSpeedDial({ actions }) {
         direction="left"
       >
         {actions ? (
-          actions.map(action => (
+          actions.map((action: ActionProps) => (
             <SpeedDialAction
               key={action.name}
               icon={action.icon}
