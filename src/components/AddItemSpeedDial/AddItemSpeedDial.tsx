@@ -3,6 +3,8 @@ import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import DoNotDisturbAltIcon from '@mui/icons-material/DoNotDisturbAlt';
 import { SvgIconProps } from '@mui/core/SvgIcon';
+import { useSelector, useDispatch } from 'react-redux';
+import { addPhone, addPc, addPrint, addLight } from '/src/redux/Item';
 
 interface ActionProps {
   name: string;
@@ -14,9 +16,30 @@ interface ActionsProps {
 }
 
 export default function AddItemSpeedDial({ actions }: ActionsProps) {
+  const dispatch = useDispatch();
+
+  const onPhone = () => dispatch(addPhone());
+  const onPc = () => dispatch(addPc());
+  const onPrint = () => dispatch(addPrint());
+  const onLight = () => dispatch(addLight());
+
+  //const item = useSelector(state => state.item);
+  //console.log(item);
   const defaultValue = {
     name: 'no data',
     icon: <DoNotDisturbAltIcon />,
+  };
+
+  const handleClickItem = (name: string) => {
+    if (name === 'Phone') {
+      onPhone();
+    } else if (name === 'Pc') {
+      onPc();
+    } else if (name === 'Print') {
+      onPrint();
+    } else {
+      onLight();
+    }
   };
 
   return (
@@ -33,6 +56,7 @@ export default function AddItemSpeedDial({ actions }: ActionsProps) {
               key={action.name}
               icon={action.icon}
               tooltipTitle={action.name}
+              onClick={() => handleClickItem(action.name)}
             />
           ))
         ) : (

@@ -3,6 +3,9 @@ import { Layout } from '/src/components/';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { createGlobalStyle } from 'styled-components';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import Item from '/src/redux/Item';
 
 const queryClient = new QueryClient();
 
@@ -25,16 +28,21 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const store = createStore(Item); // 스토어를 만듭니다.
+//console.log(store.getState());
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyles />
-      <Layout>
-        <QueryClientProvider client={queryClient}>
-          <Component {...pageProps} />
-          <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
-      </Layout>
+      <Provider store={store}>
+        <GlobalStyles />
+        <Layout>
+          <QueryClientProvider client={queryClient}>
+            <Component {...pageProps} />
+            <ReactQueryDevtools initialIsOpen={false} />
+          </QueryClientProvider>
+        </Layout>
+      </Provider>
     </>
   );
 }
