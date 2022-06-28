@@ -42,7 +42,7 @@ const ContentsRightBox = styled.div`
 `;
 
 function Charge() {
-  const { item } = useSelector(state => state);
+  const item = useSelector(state => state.item);
   return (
     <>
       <ContentsWrapper>

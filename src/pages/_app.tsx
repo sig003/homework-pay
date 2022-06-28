@@ -28,8 +28,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const store = createStore(Item); // 스토어를 만듭니다.
-//console.log(store.getState());
+const store = createStore(Item);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

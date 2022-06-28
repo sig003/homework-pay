@@ -23,7 +23,7 @@ export default function AddItemSpeedDial({ actions }: ActionsProps) {
   const onPrint = () => dispatch(addPrint());
   const onLight = () => dispatch(addLight());
 
-  //const item = useSelector(state => state.item);
+  //const { item } = useSelector(state => state);
   //console.log(item);
   const defaultValue = {
     name: 'no data',
