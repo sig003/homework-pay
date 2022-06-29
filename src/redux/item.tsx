@@ -41,12 +41,9 @@ export default function item(state = initialState, action) {
         item: [...new Set(itemArrayFour)],
       };
     case REMOVE:
-      const removeItemArray = [
-        ...state.item.filter(val => val !== action.itemName),
-      ];
       return {
         ...state,
-        item: [...removeItemArray],
+        item: [...state.item.filter(val => val !== action.itemName)],
       };
     default:
       return state;
