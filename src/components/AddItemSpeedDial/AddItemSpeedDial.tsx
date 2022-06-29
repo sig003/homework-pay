@@ -4,7 +4,7 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import DoNotDisturbAltIcon from '@mui/icons-material/DoNotDisturbAlt';
 import { SvgIconProps } from '@mui/core/SvgIcon';
 import { useSelector, useDispatch } from 'react-redux';
-import { addPhone, addPc, addPrint, addLight } from '/src/redux/Item';
+import { addPhone, addPc, addPrint, addLight } from '/src/redux/item';
 
 interface ActionProps {
   name: string;

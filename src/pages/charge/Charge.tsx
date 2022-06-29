@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
-import { ChargeContentDateTime, AddItemSpeedDial } from '/src/components';
+import {
+  ChargeContentDateTime,
+  AddItemSpeedDial,
+  ChargeContentElectricItems,
+} from '/src/components';
 import {
   electricActions,
   foodActions,
@@ -43,6 +47,7 @@ const ContentsRightBox = styled.div`
 
 function Charge() {
   const item = useSelector(state => state.item);
+
   return (
     <>
       <ContentsWrapper>
@@ -54,7 +59,9 @@ function Charge() {
             <div>
               <ElectricBoltIcon color="primary" fontSize="medium" />
             </div>
-            <div>Contents</div>
+            <div>
+              <ChargeContentElectricItems />
+            </div>
             <AddItemSpeedDial actions={electricActions} />
           </ContentBox>
           <ContentBox>

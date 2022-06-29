@@ -5,7 +5,7 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import { createGlobalStyle } from 'styled-components';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import Item from '/src/redux/Item';
+import item from '/src/redux/item';
 
 const queryClient = new QueryClient();
 
@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const store = createStore(Item);
+const store = createStore(item);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
