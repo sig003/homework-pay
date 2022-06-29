@@ -6,11 +6,13 @@ const PHONE = 'item/PHONE';
 const PC = 'item/PC';
 const PRINT = 'item/PRINT';
 const LIGHT = 'item/LIGHT';
+const REMOVE = 'item/REMOVE';
 
 export const addPhone = () => ({ type: PHONE });
 export const addPc = () => ({ type: PC });
 export const addPrint = () => ({ type: PRINT });
 export const addLight = () => ({ type: LIGHT });
+export const removeItem = itemName => ({ type: REMOVE, itemName });
 
 export default function item(state = initialState, action) {
   switch (action.type) {
@@ -37,6 +39,14 @@ export default function item(state = initialState, action) {
       return {
         ...state,
         item: [...new Set(itemArrayFour)],
+      };
+    case REMOVE:
+      const removeItemArray = [
+        ...state.item.filter(val => val !== action.itemName),
+      ];
+      return {
+        ...state,
+        item: [...removeItemArray],
       };
     default:
       return state;
