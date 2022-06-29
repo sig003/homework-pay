@@ -2,10 +2,17 @@ import { useSelector } from 'react-redux';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { useEffect } from 'react';
+import styled from 'styled-components';
 
 interface RootStateProps {
   item: string[];
 }
+
+const ContentsWrapper = styled.div`
+  display: flex;
+  gap: 1rem;
+  padding-left: 2rem;
+`;
 
 export default function ChargeContentElectricItems() {
   const handleDelete = () => {
@@ -15,7 +22,7 @@ export default function ChargeContentElectricItems() {
   console.log(item);
   return (
     <>
-      <div>
+      <ContentsWrapper>
         {item.map((list: string) => {
           if (list === 'pc') {
             return <Chip label="Pc" onDelete={handleDelete} key={list} />;
@@ -27,7 +34,7 @@ export default function ChargeContentElectricItems() {
             return <Chip label="Light" onDelete={handleDelete} key={list} />;
           }
         })}
-      </div>
+      </ContentsWrapper>
     </>
   );
 }
