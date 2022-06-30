@@ -2,13 +2,14 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import DoNotDisturbAltIcon from '@mui/icons-material/DoNotDisturbAlt';
-import { SvgIconProps } from '@mui/core/SvgIcon';
+import { SvgIconProps } from '@mui/material/SvgIcon';
 import { useSelector, useDispatch } from 'react-redux';
 import { addPhone, addPc, addPrint, addLight } from '/src/redux/item';
+import React from 'react';
 
 interface ActionProps {
   name: string;
-  icon: React.ComponentType<SvgIconProps>;
+  icon: React.ReactNode; //React.ComponentType<SvgIconProps>;
 }
 
 interface ActionsProps {

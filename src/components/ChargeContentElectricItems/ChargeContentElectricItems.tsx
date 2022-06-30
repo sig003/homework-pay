@@ -18,7 +18,7 @@ const ContentsWrapper = styled.div`
 export default function ChargeContentElectricItems() {
   const dispatch = useDispatch();
 
-  const handleDelete = label => {
+  const handleDelete = (label: string) => {
     dispatch(removeItem(label));
   };
   const item = useSelector((state: RootStateProps) => state.item);

@@ -1,3 +1,8 @@
+interface ActionProps {
+  type: string;
+  itemName: string;
+}
+
 const initialState = {
   item: [],
 };
@@ -12,9 +17,9 @@ export const addPhone = () => ({ type: PHONE });
 export const addPc = () => ({ type: PC });
 export const addPrint = () => ({ type: PRINT });
 export const addLight = () => ({ type: LIGHT });
-export const removeItem = itemName => ({ type: REMOVE, itemName });
+export const removeItem = (itemName: string) => ({ type: REMOVE, itemName });
 
-export default function item(state = initialState, action) {
+export default function item(state = initialState, action: ActionProps) {
   switch (action.type) {
     case PHONE:
       const itemArrayOne = [...state.item, 'phone'];
