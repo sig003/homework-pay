@@ -40,6 +40,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.12",
+    "@types/styled-components": "^5.1.25",
     "babel-loader": "^8.2.5",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",

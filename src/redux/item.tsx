@@ -13,11 +13,21 @@ const PRINT = 'item/PRINT';
 const LIGHT = 'item/LIGHT';
 const REMOVE = 'item/REMOVE';
 
+const COFFEE = 'item/COFFEE';
+const DINING = 'item/DINING';
+const DESERT = 'item/DESERT';
+const DRINK = 'item/DRINK';
+
 export const addPhone = () => ({ type: PHONE });
 export const addPc = () => ({ type: PC });
 export const addPrint = () => ({ type: PRINT });
 export const addLight = () => ({ type: LIGHT });
 export const removeItem = (itemName: string) => ({ type: REMOVE, itemName });
+
+export const addCoffee = () => ({ type: COFFEE });
+export const addDining = () => ({ type: DINING });
+export const addDesert = () => ({ type: DESERT });
+export const addDrink = () => ({ type: DRINK });
 
 export default function item(state = initialState, action: ActionProps) {
   switch (action.type) {
@@ -44,6 +54,30 @@ export default function item(state = initialState, action: ActionProps) {
       return {
         ...state,
         item: [...new Set(itemArrayFour)],
+      };
+    case COFFEE:
+      const itemArrayFive = [...state.item, 'coffee'];
+      return {
+        ...state,
+        item: [...new Set(itemArrayFive)],
+      };
+    case DINING:
+      const itemArraySix = [...state.item, 'dining'];
+      return {
+        ...state,
+        item: [...new Set(itemArraySix)],
+      };
+    case DESERT:
+      const itemArraySeven = [...state.item, 'desert'];
+      return {
+        ...state,
+        item: [...new Set(itemArraySeven)],
+      };
+    case DRINK:
+      const itemArrayEight = [...state.item, 'drink'];
+      return {
+        ...state,
+        item: [...new Set(itemArrayEight)],
       };
     case REMOVE:
       return {

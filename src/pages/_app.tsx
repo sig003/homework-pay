@@ -1,11 +1,11 @@
 import type { AppProps } from 'next/app';
-import { Layout } from '/src/components/';
+import { Layout } from 'components/';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { createGlobalStyle } from 'styled-components';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import item from '/src/redux/item';
+import item from 'redux/item';
 
 const queryClient = new QueryClient();
 

@@ -4,7 +4,16 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import DoNotDisturbAltIcon from '@mui/icons-material/DoNotDisturbAlt';
 import { SvgIconProps } from '@mui/material/SvgIcon';
 import { useSelector, useDispatch } from 'react-redux';
-import { addPhone, addPc, addPrint, addLight } from '/src/redux/item';
+import {
+  addPhone,
+  addPc,
+  addPrint,
+  addLight,
+  addCoffee,
+  addDining,
+  addDesert,
+  addDrink,
+} from 'redux/item';
 import React from 'react';
 
 interface ActionProps {
@@ -23,6 +32,10 @@ export default function AddItemSpeedDial({ actions }: ActionsProps) {
   const onPc = () => dispatch(addPc());
   const onPrint = () => dispatch(addPrint());
   const onLight = () => dispatch(addLight());
+  const onCoffee = () => dispatch(addCoffee());
+  const onDining = () => dispatch(addDining());
+  const onDesert = () => dispatch(addDesert());
+  const onDrink = () => dispatch(addDrink());
 
   //const { item } = useSelector(state => state);
   //console.log(item);
@@ -38,8 +51,16 @@ export default function AddItemSpeedDial({ actions }: ActionsProps) {
       onPc();
     } else if (name === 'Print') {
       onPrint();
-    } else {
+    } else if (name === 'Light') {
       onLight();
+    } else if (name === 'Coffee') {
+      onCoffee();
+    } else if (name === 'Dining') {
+      onDining();
+    } else if (name === 'Desert') {
+      onDesert();
+    } else {
+      onDrink();
     }
   };
 

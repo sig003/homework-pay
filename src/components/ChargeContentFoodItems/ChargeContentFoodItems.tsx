@@ -13,7 +13,7 @@ const ContentsWrapper = styled.div`
   padding-left: 2rem;
 `;
 
-export default function ChargeContentElectricItems() {
+export default function ChargeContentFoodItems() {
   const dispatch = useDispatch();
 
   const handleDelete = (label: string) => {
@@ -25,31 +25,35 @@ export default function ChargeContentElectricItems() {
     <>
       <ContentsWrapper>
         {item.map((list: string) => {
-          if (list === 'pc') {
-            return (
-              <Chip label="Pc" onDelete={() => handleDelete('pc')} key={list} />
-            );
-          } else if (list === 'print') {
+          if (list === 'coffee') {
             return (
               <Chip
-                label="Print"
-                onDelete={() => handleDelete('print')}
+                label="Coffee"
+                onDelete={() => handleDelete('coffee')}
                 key={list}
               />
             );
-          } else if (list === 'phone') {
+          } else if (list === 'dining') {
             return (
               <Chip
-                label="Phone"
-                onDelete={() => handleDelete('phone')}
+                label="Dining"
+                onDelete={() => handleDelete('dining')}
                 key={list}
               />
             );
-          } else if (list === 'light') {
+          } else if (list === 'desert') {
             return (
               <Chip
-                label="Light"
-                onDelete={() => handleDelete('light')}
+                label="Desert"
+                onDelete={() => handleDelete('desert')}
+                key={list}
+              />
+            );
+          } else if (list === 'drink') {
+            return (
+              <Chip
+                label="Drink"
+                onDelete={() => handleDelete('drink')}
                 key={list}
               />
             );

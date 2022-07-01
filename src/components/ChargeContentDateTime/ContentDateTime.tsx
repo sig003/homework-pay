@@ -1,4 +1,4 @@
-import { DateTimePicker } from '/src/components';
+import { DateTimePicker } from 'components';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import styled from 'styled-components';
 

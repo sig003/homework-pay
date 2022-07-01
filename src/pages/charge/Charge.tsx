@@ -5,11 +5,12 @@ import {
   ChargeContentDateTime,
   AddItemSpeedDial,
   ChargeContentElectricItems,
-} from '/src/components';
+  ChargeContentFoodItems,
+} from 'components';
 import {
   electricActions,
   foodActions,
-} from '/src/components/ChargeContentActions/ContentActions';
+} from 'components/ChargeContentActions/ContentActions';
 import { useSelector } from 'react-redux';
 
 const ContentsWrapper = styled.div`
@@ -68,7 +69,9 @@ function Charge() {
             <div>
               <FastfoodIcon color="primary" fontSize="medium" />
             </div>
-            <div>Contents</div>
+            <div>
+              <ChargeContentFoodItems />
+            </div>
             <AddItemSpeedDial actions={foodActions} />
           </ContentBox>
         </ContentsBoxWrapper>
