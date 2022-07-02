@@ -6,12 +6,12 @@ import {
   AddItemSpeedDial,
   ChargeContentElectricItems,
   ChargeContentFoodItems,
+  Receipt,
 } from 'components';
 import {
   electricActions,
   foodActions,
 } from 'components/ChargeContentActions/ContentActions';
-import { useSelector } from 'react-redux';
 
 const ContentsWrapper = styled.div`
   display: flex;
@@ -47,8 +47,6 @@ const ContentsRightBox = styled.div`
 `;
 
 function Charge() {
-  const item = useSelector(state => state.item);
-
   return (
     <>
       <ContentsWrapper>
@@ -75,7 +73,9 @@ function Charge() {
             <AddItemSpeedDial actions={foodActions} />
           </ContentBox>
         </ContentsBoxWrapper>
-        <ContentsRightBox>RECEIPIT {item}</ContentsRightBox>
+        <ContentsRightBox>
+          <Receipt />
+        </ContentsRightBox>
       </ContentsWrapper>
     </>
   );

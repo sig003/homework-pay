@@ -4,3 +4,4 @@ export { default as ChargeContentDateTime } from './ChargeContentDateTime';
 export { default as AddItemSpeedDial } from './AddItemSpeedDial';
 export { default as ChargeContentElectricItems } from './ChargeContentElectricItems';
 export { default as ChargeContentFoodItems } from './ChargeContentFoodItems';
+export { default as Receipt } from './Receipt';
