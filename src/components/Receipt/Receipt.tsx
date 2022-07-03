@@ -17,13 +17,20 @@ export default function Receipt() {
     margin: 1rem 1rem 1rem 1rem;
   `;
 
+  const Item = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  `;
+
   return (
     <>
       <ReceiptWrapper>
         <h2>RECEIPT</h2>
         <Dash />
         {item.map(list => {
-          return <div key={list}>{list}</div>;
+          return <Item key={list}>{list}</Item>;
         })}
         <Dash />
       </ReceiptWrapper>
