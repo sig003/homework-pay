@@ -29,8 +29,13 @@ export default function Receipt() {
       <ReceiptWrapper>
         <h2>RECEIPT</h2>
         <Dash />
-        {item.map(list => {
-          return <Item key={list}>{list}</Item>;
+        {item.map((list: string) => {
+          return (
+            <Item key={list}>
+              <span>{list}</span>
+              <span>$12,000</span>
+            </Item>
+          );
         })}
         <Dash />
       </ReceiptWrapper>
