@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import Button from '@mui/material/Button';
 
 export default function Receipt() {
   const item = useSelector(state => state.item);
+
+  const ReceiptMainWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 680px;
+  `;
 
   const ReceiptWrapper = styled.div`
     diplay: flex;
@@ -35,20 +42,25 @@ export default function Receipt() {
 
   return (
     <>
-      <ReceiptWrapper>
-        <h2>RECEIPT</h2>
-        <Dash />
-        {item.map((list: string) => {
-          return (
-            <Item key={list}>
-              <span>{list}</span>
-              <span>$12,000</span>
-            </Item>
-          );
-        })}
-        <Dash />
-        <Total>Total</Total>
-      </ReceiptWrapper>
+      <ReceiptMainWrapper>
+        <ReceiptWrapper>
+          <h2>RECEIPT</h2>
+          <Dash />
+          {item.map((list: string) => {
+            return (
+              <Item key={list}>
+                <span>{list}</span>
+                <span>$12,000</span>
+              </Item>
+            );
+          })}
+          <Dash />
+          <Total>Total</Total>
+        </ReceiptWrapper>
+        <Button variant="contained" style={{ textTransform: 'unset' }}>
+          Charge
+        </Button>
+      </ReceiptMainWrapper>
     </>
   );
 }
