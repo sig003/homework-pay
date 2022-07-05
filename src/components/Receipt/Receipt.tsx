@@ -57,7 +57,7 @@ export default function Receipt() {
           <Dash />
           <Total>Total</Total>
         </ReceiptWrapper>
-        <Button variant="contained" style={{ textTransform: 'unset' }}>
+        <Button variant="contained" style={{ textTransform: 'none' }}>
           Charge
         </Button>
       </ReceiptMainWrapper>
