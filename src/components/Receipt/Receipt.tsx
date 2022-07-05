@@ -24,6 +24,14 @@ export default function Receipt() {
     padding: 1rem;
   `;
 
+  const Total = styled.div`
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  `;
+
   return (
     <>
       <ReceiptWrapper>
@@ -38,6 +46,7 @@ export default function Receipt() {
           );
         })}
         <Dash />
+        <Total>Total</Total>
       </ReceiptWrapper>
     </>
   );
