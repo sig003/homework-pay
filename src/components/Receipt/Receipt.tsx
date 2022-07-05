@@ -9,6 +9,7 @@ export default function Receipt() {
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 800px;
   `;
 
   const Dash = styled.div`

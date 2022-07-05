@@ -41,9 +41,10 @@ const ContentBox = styled.div`
 
 const ContentsRightBox = styled.div`
   width: 20rem;
-  height: 34rem;
+  height: 39rem;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
+  margin-top: 5rem;
 `;
 
 function Charge() {
