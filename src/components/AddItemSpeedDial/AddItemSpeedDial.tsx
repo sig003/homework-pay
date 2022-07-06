@@ -67,6 +67,7 @@ export default function AddItemSpeedDial({ actions }: ActionsProps) {
   return (
     <>
       <SpeedDial
+        style={{ height: '100px' }}
         ariaLabel="Add Item"
         FabProps={{ size: 'small' }}
         icon={<SpeedDialIcon />}
