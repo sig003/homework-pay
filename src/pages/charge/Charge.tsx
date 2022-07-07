@@ -16,7 +16,6 @@ import {
 const ContentsWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
 `;
 
 const ContentsBoxWrapper = styled.div`
