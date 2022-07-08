@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
+import { useState, useEffect } from 'react';
 
 export default function Receipt() {
+  const [totalSum, setTotalSum] = useState(0);
   const item = useSelector(state => state.item);
 
   const ReceiptMainWrapper = styled.div`
@@ -40,6 +42,23 @@ export default function Receipt() {
     padding: 1rem;
   `;
 
+  const price = {
+    phone: 30,
+    pc: 50,
+    light: 90,
+    print: 10,
+    coffee: 100,
+    dining: 200,
+    desert: 150,
+    drink: 120,
+  };
+
+  useEffect(() => {
+    item.map(list => {
+      setTotalSum(totalSum + price[list]);
+    });
+  }, [item]);
+
   return (
     <>
       <ReceiptMainWrapper>
@@ -50,12 +69,15 @@ export default function Receipt() {
             return (
               <Item key={list}>
                 <span>{list}</span>
-                <span>$12,000</span>
+                <span>$ {price[list]}</span>
               </Item>
             );
           })}
           <Dash />
-          <Total>Total</Total>
+          <Total>
+            <span>Total</span>
+            <span>$ {totalSum}</span>
+          </Total>
         </ReceiptWrapper>
         <Button variant="contained" style={{ textTransform: 'none' }}>
           Charge
