@@ -59,6 +59,10 @@ export default function Receipt() {
     });
   }, [item]);
 
+  const handleClickCharge = () => {
+    alert('Coming Soon!!');
+  };
+
   return (
     <>
       <ReceiptMainWrapper>
@@ -79,7 +83,11 @@ export default function Receipt() {
             <span>$ {totalSum}</span>
           </Total>
         </ReceiptWrapper>
-        <Button variant="contained" style={{ textTransform: 'none' }}>
+        <Button
+          variant="contained"
+          style={{ textTransform: 'none' }}
+          onClick={handleClickCharge}
+        >
           Charge
         </Button>
       </ReceiptMainWrapper>
