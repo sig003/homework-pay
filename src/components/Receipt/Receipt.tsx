@@ -54,7 +54,7 @@ export default function Receipt() {
   };
 
   useEffect(() => {
-    item.map(list => {
+    item.map((list: string) => {
       setTotalSum(totalSum + price[list]);
     });
   }, [item]);
