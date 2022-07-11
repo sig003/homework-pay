@@ -3,6 +3,10 @@ import { useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
 import { useState, useEffect } from 'react';
 
+interface PriceProps {
+  [index: string]: number;
+}
+
 export default function Receipt() {
   const [totalSum, setTotalSum] = useState(0);
   const item = useSelector(state => state.item);
@@ -42,7 +46,7 @@ export default function Receipt() {
     padding: 1rem;
   `;
 
-  const price = {
+  const price: PriceProps = {
     phone: 30,
     pc: 50,
     light: 90,
