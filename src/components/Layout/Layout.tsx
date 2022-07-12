@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import { LeftAside } from 'components';
 
 interface ChildrenProps {
   children: React.ReactNode;
@@ -53,7 +54,9 @@ export default function Layout({ children }: ChildrenProps) {
           <LogoStyle>HomeworkPay</LogoStyle>
         </HeaderLayout>
         <AsideSectionLayout>
-          <AsideLayout>aside</AsideLayout>
+          <AsideLayout>
+            <LeftAside />
+          </AsideLayout>
           <SectionLayout>{children}</SectionLayout>
         </AsideSectionLayout>
       </LayoutWrapper>
