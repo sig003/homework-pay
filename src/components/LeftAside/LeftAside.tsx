@@ -5,6 +5,7 @@ const LeftAsideLayout = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  cursor: pointer;
 `;
 export default function LeftAside() {
   return (
