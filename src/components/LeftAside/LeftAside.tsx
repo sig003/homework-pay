@@ -2,15 +2,25 @@ import styled from 'styled-components';
 
 const LeftAsideLayout = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem;
+  height: 8rem;
+  gap: 2rem;
+`;
+
+const Content = styled.div`
   cursor: pointer;
 `;
+
 export default function LeftAside() {
   return (
     <>
-      <LeftAsideLayout>Charge</LeftAsideLayout>
+      <LeftAsideLayout>
+        <Content>Charge</Content>
+        <Content>Charge Log</Content>
+      </LeftAsideLayout>
     </>
   );
 }
