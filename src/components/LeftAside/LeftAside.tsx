@@ -5,13 +5,18 @@ const LeftAsideLayout = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 2rem;
+  //padding: 2rem;
   height: 8rem;
-  gap: 2rem;
+  gap: 1rem;
 `;
 
 const Content = styled.div`
   cursor: pointer;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  &:hover {
+    background-color: hsl(0, 6%, 93%);
+  }
 `;
 
 export default function LeftAside() {
