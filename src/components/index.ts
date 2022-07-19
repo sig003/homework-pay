@@ -6,3 +6,4 @@ export { default as ChargeContentElectricItems } from './ChargeContentElectricIt
 export { default as ChargeContentFoodItems } from './ChargeContentFoodItems';
 export { default as Receipt } from './Receipt';
 export { default as LeftAside } from './LeftAside';
+export { default as ChargeDialog } from './ChargeDialog';

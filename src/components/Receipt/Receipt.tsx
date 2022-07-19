@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
 import { useState, useEffect } from 'react';
+import { ChargeDialog } from 'components';
 
 interface PriceProps {
   [index: string]: number;
 }
 
 export default function Receipt() {
+  const [open, setOpen] = useState(false);
   const [totalSum, setTotalSum] = useState(0);
   const item = useSelector(state => state.item);
 
@@ -64,7 +66,11 @@ export default function Receipt() {
   }, [item]);
 
   const handleClickCharge = () => {
-    alert('Coming Soon!!');
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
@@ -94,6 +100,10 @@ export default function Receipt() {
         >
           Charge
         </Button>
+        <ChargeDialog
+          open={open}
+          onClose={handleClose}
+        />
       </ReceiptMainWrapper>
     </>
   );
