@@ -64,6 +64,23 @@ export default function ChargeDialog(props: ChargeDialogProps) {
     padding: 1rem;
   `;
 
+  const ChargedStamp = styled.div`
+    border: 4px dashed red;
+    border-radius: 90%;
+    width: 100px;
+    height: 100px;
+    color: red;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    animation-delay: 1s;
+  `;
+
   const handleClose = () => {
     onClose();
   };
@@ -82,6 +99,7 @@ export default function ChargeDialog(props: ChargeDialogProps) {
          })}
        <Dash />
        <Total>
+        <ChargedStamp>Charged</ChargedStamp>
          <span>Total</span>
          <span>$ {totalSum}</span>
         </Total>
