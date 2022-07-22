@@ -60,9 +60,11 @@ export default function Receipt() {
   };
 
   useEffect(() => {
+    let sum = 0;
     item.map((list: string) => {
-      setTotalSum(totalSum + price[list]);
+       sum = sum + price[list];
     });
+    setTotalSum(sum);
   }, [item]);
 
   const handleClickCharge = () => {

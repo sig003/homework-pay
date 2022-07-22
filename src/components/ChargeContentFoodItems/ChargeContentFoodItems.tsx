@@ -20,7 +20,7 @@ export default function ChargeContentFoodItems() {
     dispatch(removeItem(label));
   };
   const item = useSelector((state: RootStateProps) => state.item);
-  //console.log(item);
+
   return (
     <>
       <ContentsWrapper>
