@@ -22,6 +22,7 @@ const HeaderLayout = styled.div`
 
 const AsideSectionLayout = styled.div`
   display: flex;
+  height: calc(100% - 70px);
 `;
 
 const AsideLayout = styled.div`
@@ -33,8 +34,8 @@ const AsideLayout = styled.div`
 
 const SectionLayout = styled.div`
   width: calc(100% - 200px);
-  height: calc(100% - 70px);
-  position: fixed;
+  height: 100%;
+  //position: fixed;
   overflow: auto;
   left: 200px;
   background-color: hsl(0, 6%, 93%);
