@@ -9,13 +9,17 @@ interface ChargeDialogProps {
   onClose: () => void;
 }
 
+interface RootStateProps {
+  item: string[];
+}
+
 interface PriceProps {
   [index: string]: number;
 }
 
 export default function ChargeDialog(props: ChargeDialogProps) {
   const { onClose, open } = props;
-  const item = useSelector(state => state.item);
+  const item = useSelector((state: RootStateProps) => state.item);
   const [totalSum, setTotalSum] = useState(0);
 
   const price: PriceProps = {
@@ -97,15 +101,15 @@ export default function ChargeDialog(props: ChargeDialogProps) {
               <span>{list}</span>
               <span>$ {price[list]}</span>
             </Item>
-           );
-         })}
-       <Dash />
-       <Total>
-        <ChargedStamp>Charged</ChargedStamp>
-         <span>Total</span>
-         <span>$ {totalSum}</span>
+          );
+        })}
+        <Dash />
+        <Total>
+          <ChargedStamp>Charged</ChargedStamp>
+          <span>Total</span>
+          <span>$ {totalSum}</span>
         </Total>
-     </ReceiptWrapper>
-  </Dialog>
+      </ReceiptWrapper>
+    </Dialog>
   );
 }

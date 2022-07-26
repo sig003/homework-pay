@@ -8,10 +8,14 @@ interface PriceProps {
   [index: string]: number;
 }
 
+interface RootStateProps {
+  item: string[];
+}
+
 export default function Receipt() {
   const [open, setOpen] = useState(false);
   const [totalSum, setTotalSum] = useState(0);
-  const item = useSelector(state => state.item);
+  const item = useSelector((state: RootStateProps) => state.item);
   const [buttonDisabled, setButtonDisabled] = useState('disabled');
 
   const ReceiptMainWrapper = styled.div`
