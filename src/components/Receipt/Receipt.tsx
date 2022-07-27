@@ -16,7 +16,7 @@ export default function Receipt() {
   const [open, setOpen] = useState(false);
   const [totalSum, setTotalSum] = useState(0);
   const item = useSelector((state: RootStateProps) => state.item);
-  const [buttonDisabled, setButtonDisabled] = useState('disabled');
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const ReceiptMainWrapper = styled.div`
     display: flex;
@@ -74,7 +74,7 @@ export default function Receipt() {
 
   useEffect(() => {
     if (totalSum > 0) {
-      setButtonDisabled('');
+      setButtonDisabled(false);
     }
   }, [totalSum]);
 
