@@ -12,46 +12,46 @@ interface RootStateProps {
   item: string[];
 }
 
+const ReceiptMainWrapper = styled.div`
+display: flex;
+flex-direction: column;
+height: 680px;
+`;
+
+const ReceiptWrapper = styled.div`
+diplay: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 800px;
+`;
+
+const Dash = styled.div`
+border-bottom: 1px dashed hsl(0, 0%, 0%);
+width: 90%;
+margin: 1rem 1rem 1rem 1rem;
+`;
+
+const Item = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 1rem;
+`;
+
+const Total = styled.div`
+font-weight: 600;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 1rem;
+`;
+
 export default function Receipt() {
   const [open, setOpen] = useState(false);
   const [totalSum, setTotalSum] = useState(0);
   const item = useSelector((state: RootStateProps) => state.item);
   const [buttonDisabled, setButtonDisabled] = useState(true);
-
-  const ReceiptMainWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 680px;
-  `;
-
-  const ReceiptWrapper = styled.div`
-    diplay: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 800px;
-  `;
-
-  const Dash = styled.div`
-    border-bottom: 1px dashed hsl(0, 0%, 0%);
-    width: 90%;
-    margin: 1rem 1rem 1rem 1rem;
-  `;
-
-  const Item = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-  `;
-
-  const Total = styled.div`
-    font-weight: 600;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-  `;
 
   const price: PriceProps = {
     phone: 30,

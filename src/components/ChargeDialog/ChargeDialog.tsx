@@ -17,6 +17,52 @@ interface PriceProps {
   [index: string]: number;
 }
 
+const Dash = styled.div`
+border-bottom: 1px dashed hsl(0, 0%, 0%);
+width: 92%;
+margin: 1rem 1rem 1rem 1rem;
+`;
+
+const ReceiptWrapper = styled.div`
+diplay: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 400px;
+`;
+
+const Item = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 1rem;
+`;
+
+const Total = styled.div`
+font-weight: 600;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 1rem;
+`;
+
+const ChargedStamp = styled.div`
+border: 4px dashed red;
+border-radius: 90%;
+width: 100px;
+height: 100px;
+color: red;
+font-weight: 600;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 100;
+position: absolute;
+top: 40%;
+left: 40%;
+animation-delay: 1s;
+`;
+
 export default function ChargeDialog(props: ChargeDialogProps) {
   const { onClose, open } = props;
   const item = useSelector((state: RootStateProps) => state.item);
@@ -40,52 +86,6 @@ export default function ChargeDialog(props: ChargeDialogProps) {
     });
     setTotalSum(sum);
   }, [item]);
-
-  const Dash = styled.div`
-    border-bottom: 1px dashed hsl(0, 0%, 0%);
-    width: 92%;
-    margin: 1rem 1rem 1rem 1rem;
-  `;
-
-  const ReceiptWrapper = styled.div`
-    diplay: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 400px;
-  `;
-
-  const Item = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-  `;
-
-  const Total = styled.div`
-    font-weight: 600;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-  `;
-
-  const ChargedStamp = styled.div`
-    border: 4px dashed red;
-    border-radius: 90%;
-    width: 100px;
-    height: 100px;
-    color: red;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    animation-delay: 1s;
-  `;
 
   const handleClose = () => {
     onClose();
