@@ -1,22 +1,29 @@
+//typescript reference
+//https://react.vlpt.us/using-typescript/05-ts-redux.html
+
 interface ActionProps {
   type: string;
   itemName: string;
 }
 
-const initialState = {
+type PayState = {
+  item: string[];
+}
+
+const initialState: PayState = {
   item: [],
 };
 
-const PHONE = 'item/PHONE';
-const PC = 'item/PC';
-const PRINT = 'item/PRINT';
-const LIGHT = 'item/LIGHT';
-const REMOVE = 'item/REMOVE';
+const PHONE = 'item/PHONE' as const;
+const PC = 'item/PC' as const;
+const PRINT = 'item/PRINT' as const;
+const LIGHT = 'item/LIGHT' as const;
+const REMOVE = 'item/REMOVE' as const;
 
-const COFFEE = 'item/COFFEE';
-const DINING = 'item/DINING';
-const DESERT = 'item/DESERT';
-const DRINK = 'item/DRINK';
+const COFFEE = 'item/COFFEE' as const;
+const DINING = 'item/DINING' as const;
+const DESERT = 'item/DESERT' as const;
+const DRINK = 'item/DRINK' as const;
 
 export const addPhone = () => ({ type: PHONE });
 export const addPc = () => ({ type: PC });
@@ -29,7 +36,19 @@ export const addDining = () => ({ type: DINING });
 export const addDesert = () => ({ type: DESERT });
 export const addDrink = () => ({ type: DRINK });
 
-export default function item(state = initialState, action: ActionProps) {
+type PayAction =
+  | ReturnType<typeof addPhone>
+  | ReturnType<typeof addPc>
+  | ReturnType<typeof addPrint>
+  | ReturnType<typeof addLight>
+  | ReturnType<typeof removeItem>
+  | ReturnType<typeof addCoffee>
+  | ReturnType<typeof addDining>
+  | ReturnType<typeof addDesert>
+  | ReturnType<typeof addDrink>
+  ;
+
+export default function item(state: PayState = initialState, action: PayAction) {
   switch (action.type) {
     case PHONE:
       const itemArrayOne = [...state.item, 'phone'];

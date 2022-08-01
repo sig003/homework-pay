@@ -22,7 +22,7 @@ interface ActionProps {
 }
 
 interface ActionsProps {
-  actions: [ActionProps];
+  actions: ActionProps[];
 }
 
 export default function AddItemSpeedDial({ actions }: ActionsProps) {

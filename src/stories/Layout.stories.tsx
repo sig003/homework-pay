@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Layout } from '/src/components';
+import { Layout } from 'components';
 
 export default {
   title: 'Layout/Layout',
@@ -18,6 +18,6 @@ export default {
   ],
 } as ComponentMeta<typeof Layout>;
 
-//const Template: ComponentStory<typeof Layout> = args => <Layout {...args} />;
+const Template: ComponentStory<typeof Layout> = args => <Layout {...args} />;
 
-export const Basic = () => <Layout />;
+//export const Basic = () => <Layout />;

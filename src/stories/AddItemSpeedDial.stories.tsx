@@ -1,7 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { AddItemSpeedDial } from '/src/components';
+import { AddItemSpeedDial } from 'components';
+
+interface ActionProps {
+  name: string;
+  icon: React.ReactNode; //React.ComponentType<SvgIconProps>;
+}
+
+interface ActionsProps {
+  actions: ActionProps[];
+}
 
 export default {
   title: 'Components/AddItemSpeedDial',
@@ -22,6 +31,6 @@ const Template: ComponentStory<typeof AddItemSpeedDial> = args => (
   <AddItemSpeedDial {...args} />
 );
 
-//export const Basic = Template.bind({});
-//Basic.args = { label: 'Start' };
-export const Basic = () => <AddItemSpeedDial />;
+export const Basic = Template.bind({});
+//Basic.args = { name: 'test' };
+//export const Basic = () => <AddItemSpeedDial />;
