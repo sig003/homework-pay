@@ -20,3 +20,5 @@ styled component
 component abstraction   
 heroku   
 
+### Memo
+Daily commit is very hard.
