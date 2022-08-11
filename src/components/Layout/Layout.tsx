@@ -30,6 +30,9 @@ const AsideLayout = styled.div`
   max-width: 200px;
   min-width: 200px;
   height: 100%;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const SectionLayout = styled.div`
@@ -39,6 +42,9 @@ const SectionLayout = styled.div`
   overflow: auto;
   left: 200px;
   background-color: hsl(0, 6%, 93%);
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 const LogoStyle = styled.div`

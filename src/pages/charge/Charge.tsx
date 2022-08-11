@@ -16,6 +16,9 @@ import {
 const ContentsWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 834px) {
+    flex-direction: column;
+  }
 `;
 
 const ContentsBoxWrapper = styled.div`
@@ -25,10 +28,12 @@ const ContentsBoxWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 2rem;
+  width: 70rem;
 `;
 
 const ContentBox = styled.div`
-  width: 60rem;
+  width: 100%;
+  min-width: 600px;
   height: 10rem;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
