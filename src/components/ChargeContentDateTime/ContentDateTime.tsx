@@ -6,6 +6,9 @@ const DateWrapper = styled.div`
   display: flex;
   gap: 3rem;
   padding: 2rem;
+  @media screen and (max-width: 600px) {
+    gap: 1rem;
+  }
 `;
 
 export default function ContentDateTime() {

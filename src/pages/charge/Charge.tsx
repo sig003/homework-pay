@@ -29,11 +29,20 @@ const ContentsBoxWrapper = styled.div`
   justify-content: center;
   padding: 2rem;
   width: 70rem;
+  @media screen and (max-width: 834px) {
+    width: 100%;
+    align-items: center;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const ContentBox = styled.div`
   width: 100%;
-  min-width: 600px;
+  min-width: 660px;
   height: 10rem;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
@@ -41,6 +50,13 @@ const ContentBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  @media screen and (max-width: 1000px) {
+    width: 600px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 500px;
+    min-width: 500px;
+  }
 `;
 
 const ContentsRightBox = styled.div`

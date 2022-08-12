@@ -30,7 +30,7 @@ const AsideLayout = styled.div`
   max-width: 200px;
   min-width: 200px;
   height: 100%;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     display: none;
   }
 `;
@@ -42,7 +42,7 @@ const SectionLayout = styled.div`
   overflow: auto;
   left: 200px;
   background-color: hsl(0, 6%, 93%);
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     width: 100%;
   }
 `;
