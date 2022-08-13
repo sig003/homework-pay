@@ -18,6 +18,8 @@ const ContentsWrapper = styled.div`
   flex-direction: row;
   @media screen and (max-width: 834px) {
     flex-direction: column;
+    justifi-content: center;
+    align-items: center;
   }
 `;
 
@@ -54,8 +56,9 @@ const ContentBox = styled.div`
     width: 600px;
   }
   @media screen and (max-width: 600px) {
-    width: 500px;
-    min-width: 500px;
+    width: 350px;
+    min-width: 350px;
+    padding: 10px;
   }
 `;
 
@@ -65,6 +68,9 @@ const ContentsRightBox = styled.div`
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
   margin-top: 5rem;
+  @media screen and (max-width: 834px) {
+    margin-top: 1rem;
+  }
 `;
 
 function Charge() {

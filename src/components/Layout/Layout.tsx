@@ -49,7 +49,7 @@ const SectionLayout = styled.div`
 
 const LogoStyle = styled.div`
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: hsl(0, 0%, 100%);
 `;
 
