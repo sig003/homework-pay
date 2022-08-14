@@ -13,38 +13,38 @@ interface RootStateProps {
 }
 
 const ReceiptMainWrapper = styled.div`
-display: flex;
-flex-direction: column;
-height: 680px;
+  display: flex;
+  flex-direction: column;
+  height: 680px;
 `;
 
 const ReceiptWrapper = styled.div`
-diplay: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-height: 800px;
+  diplay: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 680px;
 `;
 
 const Dash = styled.div`
-border-bottom: 1px dashed hsl(0, 0%, 0%);
-width: 90%;
-margin: 1rem 1rem 1rem 1rem;
+  border-bottom: 1px dashed hsl(0, 0%, 0%);
+  width: 90%;
+  margin: 1rem;
 `;
 
 const Item = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
 `;
 
 const Total = styled.div`
-font-weight: 600;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
 `;
 
 export default function Receipt() {
