@@ -20,6 +20,7 @@ const ContentsWrapper = styled.div`
     flex-direction: column;
     justifi-content: center;
     align-items: center;
+    min-height: 1350px;
   }
 `;
 
