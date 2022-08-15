@@ -11,6 +11,10 @@ const ContentsWrapper = styled.div`
   display: flex;
   gap: 1rem;
   padding-left: 2rem;
+  @media screen and (max-width: 600px) {
+    gap: 0.3rem;
+    padding: 0;
+  }
 `;
 
 export default function ChargeContentElectricItems() {

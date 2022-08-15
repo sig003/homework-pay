@@ -8,6 +8,7 @@ const DateWrapper = styled.div`
   padding: 2rem;
   @media screen and (max-width: 600px) {
     gap: 1rem;
+    padding: 0;
   }
 `;
 
