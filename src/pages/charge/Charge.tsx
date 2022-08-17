@@ -77,12 +77,12 @@ const ContentsRightBox = styled.div`
 function Charge() {
   return (
     <>
-      <ContentsWrapper>
-        <ContentsBoxWrapper>
-          <ContentBox>
+      <ContentsWrapper data-testid="ContentsWrapper">
+        <ContentsBoxWrapper data-testid="ContentsBoxWrapper">
+          <ContentBox data-testid="ContentBoxDateTime">
             <ChargeContentDateTime />
           </ContentBox>
-          <ContentBox>
+          <ContentBox data-testid="ContentBoxElectricItems">
             <div>
               <ElectricBoltIcon color="primary" fontSize="medium" />
             </div>
@@ -91,7 +91,7 @@ function Charge() {
             </div>
             <AddItemSpeedDial actions={electricActions} />
           </ContentBox>
-          <ContentBox>
+          <ContentBox data-testid="ContentBoxFoodItems">
             <div>
               <FastfoodIcon color="primary" fontSize="medium" />
             </div>
