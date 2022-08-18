@@ -16,5 +16,6 @@ describe('<Charge />', () => {
       screen.getByTestId('ContentBoxDateTime');
       screen.getByTestId('ContentBoxElectricItems');
       screen.getByTestId('ContentBoxFoodItems');
+      screen.getByTestId('ContentsRightBox');
     });
 });

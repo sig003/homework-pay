@@ -56,15 +56,15 @@ const LogoStyle = styled.div`
 export default function Layout({ children }: ChildrenProps) {
   return (
     <>
-      <LayoutWrapper>
-        <HeaderLayout>
+      <LayoutWrapper data-testid="LayoutWrapper">
+        <HeaderLayout data-testid="HeaderLayout">
           <LogoStyle>HomeworkPay</LogoStyle>
         </HeaderLayout>
-        <AsideSectionLayout>
-          <AsideLayout>
+        <AsideSectionLayout data-testid="AsideSectionLayout">
+          <AsideLayout data-testid="AsideLayout">
             <LeftAside />
           </AsideLayout>
-          <SectionLayout>{children}</SectionLayout>
+          <SectionLayout data-testid="SectionLayout">{children}</SectionLayout>
         </AsideSectionLayout>
       </LayoutWrapper>
     </>

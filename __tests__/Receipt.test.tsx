@@ -14,5 +14,6 @@ describe('<Receipt />', () => {
 		screen.getByText('RECEIPT');
 		screen.getByText('Total');
 		screen.getByText('Charge');
+		screen.getByRole('button')
 	});
 });

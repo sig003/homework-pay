@@ -7,5 +7,10 @@ describe('<Layout />', () => {
       render(<Layout />);
 
       screen.getByText('HomeworkPay');
+      screen.getByTestId('LayoutWrapper');
+      screen.getByTestId('HeaderLayout');
+      screen.getByTestId('AsideSectionLayout');
+      screen.getByTestId('AsideLayout');
+      screen.getByTestId('SectionLayout');
     });
 });

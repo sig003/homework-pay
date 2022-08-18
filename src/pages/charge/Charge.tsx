@@ -101,7 +101,7 @@ function Charge() {
             <AddItemSpeedDial actions={foodActions} />
           </ContentBox>
         </ContentsBoxWrapper>
-        <ContentsRightBox>
+        <ContentsRightBox data-testid="ContentsRightBox">
           <Receipt />
         </ContentsRightBox>
       </ContentsWrapper>
