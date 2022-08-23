@@ -7,6 +7,6 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/charge/Charge');
+    router.push('/charge/charge');
   }, []);
 }
