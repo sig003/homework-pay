@@ -75,7 +75,9 @@ export default function Receipt() {
   useEffect(() => {
     if (totalSum > 0) {
       setButtonDisabled(false);
+      return;
     }
+    setButtonDisabled(true);
   }, [totalSum]);
 
   const handleClickCharge = () => {
